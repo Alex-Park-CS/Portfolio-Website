@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Alex's Projects</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Hi, I'm Alex</h1>
+        <p>Developer & Designer crafting digital experiences</p>
+        <a href="#projects" class="cta-button">View My Work</a>
+    </section>
+
+    <section id="projects" class="section">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <!-- Live Project -->
+            <div class="project-card" data-project="live1">
+                <span class="project-badge badge-live">🌐 Live</span>
+                <div class="project-image"><img src="images/logo.png" alt="My Image"></div>
+                <div class="project-content">
+                    <h3 class="project-title">DeadNet - Multiplayer AI Detection Game</h3>
+                    <p class="project-description">A fully functional multiplayer game using chatroom and lobby system.</p>
+                    <div class="project-tags">
+                        <span class="tag">Gemini API</span>
+                        <span class="tag">SocketIO</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://two800-202410-dtc04.onrender.com/" class="project-link" onclick="event.stopPropagation();">Visit Site →</a>
+                        <span style="color: #94a3b8;">|</span>
+                        <span class="project-link">View Details</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live Project -->
+            <div class="project-card" data-project="live2">
+                <span class="project-badge badge-live">🌐 Live</span>
+                <div class="project-image">🎨</div>
+                <div class="project-content">
+                    <h3 class="project-title">Design System</h3>
+                    <p class="project-description">A comprehensive component library with interactive documentation and live examples.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Storybook</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#" class="project-link" onclick="event.stopPropagation();">Visit Site →</a>
+                        <span style="color: #94a3b8;">|</span>
+                        <span class="project-link">View Details</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Showcase Project -->
+            <div class="project-card" data-project="showcase1">
+                <span class="project-badge badge-showcase">📸 Showcase</span>
+                <div class="project-image">💡</div>
+                <div class="project-content">
+                    <h3 class="project-title">Enterprise Dashboard</h3>
+                    <p class="project-description">A private analytics dashboard for a Fortune 500 company with real-time data visualization.</p>
+                    <div class="project-tags">
+                        <span class="tag">Vue.js</span>
+                        <span class="tag">D3.js</span>
+                        <span class="tag">Python</span>
+                    </div>
+                    <div class="project-actions">
+                        <span class="project-link">View Screenshots & Demo →</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Showcase Project -->
+            <div class="project-card" data-project="showcase2">
+                <span class="project-badge badge-showcase">📸 Showcase</span>
+                <div class="project-image">⚡</div>
+                <div class="project-content">
+                    <h3 class="project-title">Mobile Banking App</h3>
+                    <p class="project-description">A secure mobile banking application with biometric authentication and instant transfers.</p>
+                    <div class="project-tags">
+                        <span class="tag">React Native</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">AWS</span>
+                    </div>
+                    <div class="project-actions">
+                        <span class="project-link">View Screenshots & Demo →</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Project Details -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div class="modal-header">
+                <h2 id="modalTitle">Project Title</h2>
+                <div class="project-tags" id="modalTags"></div>
+            </div>
+            <div class="modal-body">
+                <div class="detail-section">
+                    <h3>About This Project</h3>
+                    <p id="modalDescription">Project description goes here...</p>
+                </div>
+
+                <div class="detail-section" id="mediaSection">
+                    <h3>Project Gallery</h3>
+                    <div class="media-gallery">
+                        <div class="media-item">Screenshot 1</div>
+                        <div class="media-item">Screenshot 2</div>
+                        <div class="media-item">Video Demo</div>
+                        <div class="media-item">Screenshot 3</div>
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <h3>Key Features</h3>
+                    <p id="modalFeatures">Feature list goes here...</p>
+                </div>
+
+                <div class="detail-section">
+                    <h3>Technical Details</h3>
+                    <p id="modalTechnical">Technical information goes here...</p>
+                </div>
+
+                <div class="detail-section" id="liveSection">
+                    <a href="#" class="cta-button">Visit Live Site</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <p>Let's work together!</p>
+        <div class="social-links">
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+            <a href="#">Email</a>
+        </div>
+        <p style="margin-top: 1rem; opacity: 0.7;">© 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
