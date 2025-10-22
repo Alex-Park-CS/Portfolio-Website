@@ -6,16 +6,16 @@ const projectData = {
         features: "User authentication and profiles, Encrypted user data, Leaderboard of winrates, Real-time chatroom with others, AI API calls to produce game content, Responsive design for mobile and desktop",
         technical: "Built with React for the frontend and Node.js/Express for the backend. Uses MongoDB for data storage with Mongoose ODM. Implements JWT authentication and bcrypt for password hashing. Integrated with Stripe API for payment processing. Deployed on AWS with CloudFront CDN for optimal performance.",
         isLive: true,
-        liveUrl: "https://example.com"
+        liveUrl: "https://two800-202410-dtc04.onrender.com/"
     },
     live2: {
-        title: "Design System",
-        tags: ["React", "Storybook", "CSS", "TypeScript"],
-        description: "An open-source design system and component library that provides a consistent, accessible foundation for web applications. Features comprehensive documentation, live examples, and easy integration with popular frameworks.",
-        features: "50+ customizable React components, Comprehensive accessibility support (WCAG 2.1 AA), Dark mode and theming support, Interactive Storybook documentation, Full TypeScript support, Responsive components for all screen sizes, Regular updates and community contributions",
-        technical: "Built with React 18 and TypeScript for type safety. Styled using CSS-in-JS with emotion. Uses Storybook for component documentation and testing. Includes automated accessibility testing with axe-core. Distributed via npm with semantic versioning. CI/CD pipeline with GitHub Actions.",
+        title: "W-Clinics",
+        tags: ["HTML", "Javascript", "Firebase", "Mapbox", "Github"],
+        description: "W-clinics is a user-friendly web application designed to help individuals locate nearby walk-in clinics efficiently. Whether someone needs urgent medical attention or simply wants to find the nearest healthcare facility for routine check-ups, W-clinics streamlines the process by providing accurate information about clinics in their vicinity. This was my first ever project that I have hosted online, and does not use an actual database of clinics, but a mock clinic finding app including features that my colleagues and I thought would be necessary for a walk-in clinic web app.",
+        features: "User authentication and profiles with medical conditions, Map to navigate to selected clinic, Navigation and filter through clinics via distance, rating and wait time, Leave a review of the specific clinic, Make an appointment",
+        technical: "Built with HTML and vanilla Javascript. Uses Firebase for client data storage. Implements the navigation feature using Mapbox API.",
         isLive: true,
-        liveUrl: "https://example.com/design-system"
+        liveUrl: "https://comp-1800-dtc02.web.app/"
     },
     showcase1: {
         title: "Enterprise Dashboard",
