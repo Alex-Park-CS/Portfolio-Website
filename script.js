@@ -30,7 +30,7 @@ const projectData = {
         ]
     },
     showcase2: {
-        title: "Sharpify",
+        title: "EdgeSharp",
         tags: ["React Native", "Firebase", "Expo API"],
         description: "",
         features: "User authentication and profiles with customizable skate settings, Easy and tailored reservations with saved skate settings, Push notification that employee can notify customers with from employee web app, Prepaid punchcard system that can be recharged",

@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Your Name</title>
+    <title>Portfolio - Alex Park</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <nav>
-            <div class="logo">Alex's Projects</div>
+            <div class="logo"><img src="images/website_logo.png" alt="Alex's Projects"></div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#experiences">Experiences</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -20,60 +23,22 @@
 
     <section id="home" class="hero">
         <h1>Hi, I'm Alex</h1>
-        <p>Welcome to my space where I showcase my personal projects and experiences.</p>
-        <a href="#projects" class="cta-button">View My Work</a>
+        <p>Welcome to my space where I showcase my experiences and personal projects.</p>
+        <!-- <a href="#experiences" class="cta-button">View My Work</a> -->
     </section>
 
-    <section id="projects" class="section">
-        <h2 class="section-title">Featured Projects</h2>
+    <section id="experiences" class="section">
+        <h2 class="section-title">Professional Experiences</h2>
         <div class="projects-grid">
-            <!-- Live Project -->
-            <div class="project-card" data-project="live1">
-                <span class="project-badge badge-live">🌐 Live</span>
-                <div class="project-image"><img src="images/logo.png" alt="My Image"></div>
-                <div class="project-content">
-                    <h3 class="project-title">DeadNet</h3>
-                    <p class="project-description">A fully functional multiplayer mafia-esque game where you must identify the chatbot using chatroom and lobby system.</p>
-                    <div class="project-tags">
-                        <span class="tag">Gemini API</span>
-                        <span class="tag">SocketIO</span>
-                        <span class="tag">MongoDB</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://two800-202410-dtc04.onrender.com/" class="project-link" onclick="event.stopPropagation();">Visit Site →</a>
-                        <span style="color: #94a3b8;">|</span>
-                        <span class="project-link">View Details</span>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Live Project -->
-            <div class="project-card" data-project="live2">
-                <span class="project-badge badge-live">🌐 Live</span>
-                <div class="project-image"><img src="images/w_clinics_logo.png" alt="My Image"></div>
-                <div class="project-content">
-                    <h3 class="project-title">W-Clinics</h3>
-                    <p class="project-description">A self-ideated web application designed to help the community locate nearby walk-in clinics.</p>
-                    <div class="project-tags">
-                        <span class="tag">Vanilla Javascript</span>
-                        <span class="tag">Mapbox API</span>
-                        <span class="tag">HTML</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://comp-1800-dtc02.web.app/" class="project-link" onclick="event.stopPropagation();">Visit Site →</a>
-                        <span style="color: #94a3b8;">|</span>
-                        <span class="project-link">View Details</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Showcase Project -->
+            <!-- Showcase Project 1-->
             <div class="project-card" data-project="showcase1">
                 <span class="project-badge badge-showcase">📸 Showcase</span>
                 <div class="project-image">💡</div>
                 <div class="project-content">
                     <h3 class="project-title">PlaceSpeak</h3>
-                    <p class="project-description">A microservice feature to summarize the sentiment of social media posts for clients, leveraging AI.</p>
+                    <p class="project-description">A microservice feature to summarize the sentiment of social media
+                        posts for clients, leveraging AI.</p>
                     <div class="project-tags">
                         <span class="tag">Django</span>
                         <span class="tag">OpenAI API</span>
@@ -85,13 +50,14 @@
                 </div>
             </div>
 
-            <!-- Showcase Project -->
+            <!-- Showcase Project 2-->
             <div class="project-card" data-project="showcase2">
                 <span class="project-badge badge-showcase">📸 Showcase</span>
                 <div class="project-image">💡</div>
                 <div class="project-content">
-                    <h3 class="project-title">Sharpify</h3>
-                    <p class="project-description">Mobile skate sharpening reservation mobile app for IOS and Android devices for a local hockey shop.</p>
+                    <h3 class="project-title">MaxPerformance</h3>
+                    <p class="project-description">Mobile skate sharpening reservation mobile app for IOS and Android
+                        devices for a local hockey shop.</p>
                     <div class="project-tags">
                         <span class="tag">React Native</span>
                         <span class="tag">Firebase</span>
@@ -102,6 +68,56 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <!-- Live Project 1-->
+            <div class="project-card" data-project="live1">
+                <span class="project-badge badge-live">🌐 Live</span>
+                <div class="project-image"><img src="images/logo.png" alt="My Image"></div>
+                <div class="project-content">
+                    <h3 class="project-title">DeadNet</h3>
+                    <p class="project-description">A fully functional multiplayer mafia-esque game where you must
+                        identify the chatbot using chatroom and lobby system.</p>
+                    <div class="project-tags">
+                        <span class="tag">Gemini API</span>
+                        <span class="tag">SocketIO</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://two800-202410-dtc04.onrender.com/" class="project-link"
+                            onclick="event.stopPropagation();">Visit Site →</a>
+                        <span style="color: #94a3b8;">|</span>
+                        <span class="project-link">View Details</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live Project 2-->
+            <div class="project-card" data-project="live2">
+                <span class="project-badge badge-live">🌐 Live</span>
+                <div class="project-image"><img src="images/w_clinics_logo.png" alt="My Image"></div>
+                <div class="project-content">
+                    <h3 class="project-title">W-Clinics</h3>
+                    <p class="project-description">A self-ideated web application designed to help the community locate
+                        nearby walk-in clinics.</p>
+                    <div class="project-tags">
+                        <span class="tag">Vanilla Javascript</span>
+                        <span class="tag">Mapbox API</span>
+                        <span class="tag">HTML</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://comp-1800-dtc02.web.app/" class="project-link"
+                            onclick="event.stopPropagation();">Visit Site →</a>
+                        <span style="color: #94a3b8;">|</span>
+                        <span class="project-link">View Details</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -155,4 +171,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
