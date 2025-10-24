@@ -32,9 +32,9 @@ const projectData = {
     showcase2: {
         title: "Sharpify",
         tags: ["React Native", "Firebase", "Expo API"],
-        description: "A secure mobile banking application for iOS and Android that allows users to manage accounts, transfer money, pay bills, and deposit checks. Features biometric authentication and end-to-end encryption. This project is under NDA and cannot be publicly released.",
-        features: "Biometric authentication (Face ID/Touch ID), Account management and transaction history, Instant money transfers between accounts, Bill payment and scheduling, Mobile check deposit, Push notifications for transactions, Budgeting and spending insights",
-        technical: "Developed with React Native for cross-platform compatibility. Backend built on AWS with Lambda, API Gateway, and DynamoDB. Implements AES-256 encryption for sensitive data. Uses AWS Cognito for authentication with MFA support. Integrated with Plaid API for bank connections. Follows PCI DSS compliance standards.",
+        description: "",
+        features: "User authentication and profiles with customizable skate settings, Easy and tailored reservations with saved skate settings, Push notification that employee can notify customers with from employee web app, Prepaid punchcard system that can be recharged",
+        technical: "Developed a React Native mobile app using Expo for capturing Android and IOS users, Implemented React web app to manage reservations from employee side ,used Firebase as BaaS according to expected number of users provided by client ",
         isLive: false,
         resources: []
     }
