@@ -162,7 +162,7 @@ nav {
 }
 
 .project-card:nth-child(2) .project-image {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
 }
 
 .project-card:nth-child(3) .project-image {
@@ -170,7 +170,7 @@ nav {
 }
 
 .project-card:nth-child(4) .project-image {
-    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
 }
 
 .project-content {

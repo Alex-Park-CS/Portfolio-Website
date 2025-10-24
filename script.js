@@ -18,20 +18,25 @@ const projectData = {
         liveUrl: "https://comp-1800-dtc02.web.app/"
     },
     showcase1: {
-        title: "Enterprise Dashboard",
-        tags: ["Vue.js", "D3.js", "Python", "PostgreSQL"],
-        description: "A comprehensive analytics dashboard developed for a Fortune 500 company to visualize complex business metrics and KPIs. This private project features real-time data processing, interactive charts, and customizable reports. Due to NDA restrictions, the live application cannot be shared publicly.",
-        features: "Real-time data visualization with D3.js, Customizable dashboard layouts, Advanced filtering and data export, Role-based access control, Automated report generation, Integration with multiple data sources, Performance monitoring and alerts",
-        technical: "Frontend built with Vue.js 3 and Composition API. Backend powered by Python with FastAPI framework. Uses PostgreSQL for data storage with Redis for caching. Implements WebSocket connections for real-time updates. Containerized with Docker and orchestrated with Kubernetes.",
-        isLive: false
+        title: "PlaceSpeak",
+        tags: ["Python", "Flask", "OpenAI API"],
+        description: "PlaceSpeak is a digital civic engagement platform that connects residents with local decision-makers to provide legitimate, location-based feedback on issues like city planning, transportation, schools, and parks. PlaceSpeak ensures that only real, relevant voices are heard, helping inform evidence-based policies. The feature my colleagues and I were tasked with was a Flask backend that leverages the OpenAI API to analyze user feedback from the social media posts and generate AI-powered reports with interactive charts and visualizations. We analyzed the sentiment of comments and summarized relevant metrics such as most and created word clouds as per client request.",
+        features: "Used in-company API to transform the online post to xml file, and used the output xml file as the input of our API. Created different routes for different types of posts (discussion board and notification board), used ThreadPoolExecutor to concurrently produce summaries and shorten load times, Basic front-end to consume API",
+        technical: "Built backend with Django and Flask framework, Used Cloudinary to store image data of social media posts, Leveraged OpenAI API for data analysis and summary, Built a responsive React-based front end to test/utilize the feature",
+        isLive: false,
+        resources: [
+            { src: "images/logo.png", alt: "Home Screen" },
+            { src: "images/w_clinics_logo.png", alt: "Home Screen" },
+        ]
     },
     showcase2: {
-        title: "Mobile Banking App",
-        tags: ["React Native", "TypeScript", "AWS", "Biometric Auth"],
+        title: "Sharpify",
+        tags: ["React Native", "Firebase", "Expo API"],
         description: "A secure mobile banking application for iOS and Android that allows users to manage accounts, transfer money, pay bills, and deposit checks. Features biometric authentication and end-to-end encryption. This project is under NDA and cannot be publicly released.",
         features: "Biometric authentication (Face ID/Touch ID), Account management and transaction history, Instant money transfers between accounts, Bill payment and scheduling, Mobile check deposit, Push notifications for transactions, Budgeting and spending insights",
         technical: "Developed with React Native for cross-platform compatibility. Backend built on AWS with Lambda, API Gateway, and DynamoDB. Implements AES-256 encryption for sensitive data. Uses AWS Cognito for authentication with MFA support. Integrated with Plaid API for bank connections. Follows PCI DSS compliance standards.",
-        isLive: false
+        isLive: false,
+        resources: []
     }
 };
 
@@ -64,8 +69,22 @@ function openModal(projectId) {
         liveSection.querySelector('a').href = project.liveUrl;
         mediaSection.style.display = 'none';
     } else {
+        const mediaGallery = document.querySelector('.media-gallery')
         liveSection.style.display = 'none';
         mediaSection.style.display = 'block';
+        
+        // Dynamically render resources
+        if (project.resources && project.resources.length > 0) {
+            mediaGallery.innerHTML = project.resources.map(resources => 
+                `<div class="media-item">
+                    <img src="${resources.src}" alt="${resources.alt}">
+                </div>`
+            ).join('');
+        } else {
+            // Fallback if no resources provided
+            mediaGallery.innerHTML = '<p style="color: #64748b;">No images available for this project.</p>';
+        }
+        
     }
 
     modal.classList.add('active');
