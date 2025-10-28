@@ -24,19 +24,22 @@ const projectData = {
         features: "Used in-company API to transform the online post to xml file, and used the output xml file as the input of our API. Created different routes for different types of posts (discussion board and notification board), used ThreadPoolExecutor to concurrently produce summaries and shorten load times, Basic front-end to consume API",
         technical: "Built backend with Django and Flask framework, Used Cloudinary to store image data of social media posts, Leveraged OpenAI API for data analysis and summary, Built a responsive React-based front end to test/utilize the feature",
         isLive: false,
-        resources: [
-            { src: "images/logo.png", alt: "Home Screen" },
-            { src: "images/w_clinics_logo.png", alt: "Home Screen" },
-        ]
+        resources: {
+            images: [],
+            link: "https://www.canva.com/design/DAGm4aSC1_U/KWyOZiPUeOECtmhWzifeTg/edit",
+        }
     },
     showcase2: {
         title: "EdgeSharp",
         tags: ["React Native", "Firebase", "Expo API"],
-        description: "",
+        description: "EdgeSharp was created from a lack of modular and digital reservation system at MaxPerformance skate shop. My colleagues and I went through many meetings each week with our clients to discuss the features that were and were not possible, and tailored to the client's requests. We also came up with our own tech stack depending on the ",
         features: "User authentication and profiles with customizable skate settings, Easy and tailored reservations with saved skate settings, Push notification that employee can notify customers with from employee web app, Prepaid punchcard system that can be recharged",
         technical: "Developed a React Native mobile app using Expo for capturing Android and IOS users, Implemented React web app to manage reservations from employee side ,used Firebase as BaaS according to expected number of users provided by client ",
         isLive: false,
-        resources: []
+        resources: {
+            images: ["images/logo.png"],
+            link: "",
+        }
     },
     showcase3: {
         title: "Titanic - Machine Learning from Disaster",
@@ -81,19 +84,26 @@ function openModal(projectId) {
         const mediaGallery = document.querySelector('.media-gallery')
         liveSection.style.display = 'none';
         mediaSection.style.display = 'block';
-        
+
         // Dynamically render resources
-        if (project.resources && project.resources.length > 0) {
-            mediaGallery.innerHTML = project.resources.map(resources => 
+        if (project.resources.images && project.resources.images.length > 0) {
+            mediaGallery.innerHTML = project.resources.images.map(resources =>
                 `<div class="media-item">
-                    <img src="${resources.src}" alt="${resources.alt}">
+                    <img src="${resources}">
                 </div>`
             ).join('');
+        } else if (project.resources.link) {
+            console.log("link here")
+            mediaGallery.innerHTML = `<div class="media-item-link">
+                <a href="${project.resources.link}" target="_blank" class="cta-button">
+                    View Presentation →
+                </a>
+            </div>`;
         } else {
             // Fallback if no resources provided
             mediaGallery.innerHTML = '<p style="color: #64748b;">No images available for this project.</p>';
         }
-        
+
     }
 
     modal.classList.add('active');
