@@ -81,7 +81,7 @@ nav {
 
 .cta-button {
     display: inline-block;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
     background: #2563eb;
     color: white;
     text-decoration: none;
@@ -177,15 +177,15 @@ nav {
     padding: 2rem;
 }
 
-.project-card:nth-child(2) .project-image {
+.project-card:nth-child(3) .project-image {
     background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
 }
 
-.project-card:nth-child(3) .project-image {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+.project-card:nth-child(2) .project-image {
+    background: linear-gradient(135deg, #4facfe 0%, #160256 100%);
 }
 
-.project-card:nth-child(4) .project-image {
+.project-card:nth-child(1) .project-image {
     background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
 }
 
@@ -326,7 +326,7 @@ nav {
 }
 
 .project-details {
-    margin-top: 2rem;
+    margin-top: 0rem;
 }
 
 .project-details h3 {
@@ -343,6 +343,11 @@ nav {
 
 .detail-section {
     margin-bottom: 2rem;
+}
+
+#liveSection {
+    text-align: center;
+
 }
 
 footer {

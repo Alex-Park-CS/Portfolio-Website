@@ -1,14 +1,5 @@
 const projectData = {
     live1: {
-        title: "DeadNet",
-        tags: ["Gemini API", "SocketIO", "MongoDB", "Cloudinary"],
-        description: "Dead Net is an educational game where players must distinguish between human and AI chat bots. The aim of this game is to learn the difference between human and AI behaviour, so that it can help you detect AI-generated content in your daily life.",
-        features: "User authentication and profiles, Encrypted user data, Leaderboard of winrates, Real-time chatroom with others, AI API calls to produce game content, Responsive design for mobile and desktop",
-        technical: "Built with React for the frontend and Node.js/Express for the backend. Uses MongoDB for data storage with Mongoose ODM. Implements JWT authentication and bcrypt for password hashing. Integrated with Stripe API for payment processing. Deployed on AWS with CloudFront CDN for optimal performance.",
-        isLive: true,
-        liveUrl: "https://two800-202410-dtc04.onrender.com/"
-    },
-    live2: {
         title: "W-Clinics",
         tags: ["HTML", "Javascript", "Firebase", "Mapbox", "Github"],
         description: "W-clinics is a user-friendly web application designed to help individuals locate nearby walk-in clinics efficiently. Whether someone needs urgent medical attention or simply wants to find the nearest healthcare facility for routine check-ups, W-clinics streamlines the process by providing accurate information about clinics in their vicinity. This was my first ever project that I have hosted online, and does not use an actual database of clinics, but a mock clinic finding app including features that my colleagues and I thought would be necessary for a walk-in clinic web app.",
@@ -16,6 +7,15 @@ const projectData = {
         technical: "Built with HTML and vanilla Javascript. Uses Firebase for client data storage. Implements the navigation feature using Mapbox API.",
         isLive: true,
         liveUrl: "https://comp-1800-dtc02.web.app/"
+    },
+    live2: {
+        title: "DeadNet",
+        tags: ["Gemini API", "SocketIO", "MongoDB", "Cloudinary"],
+        description: "Dead Net is an educational game where players must distinguish between human and AI chat bots. The aim of this game is to learn the difference between human and AI behaviour, so that it can help you detect AI-generated content in your daily life.",
+        features: "User authentication and profiles, Encrypted user data, Leaderboard of winrates, Real-time chatroom with others, AI API calls to produce game content, Responsive design for mobile and desktop",
+        technical: "Built with React for the frontend and Node.js/Express for the backend. Uses MongoDB for data storage with Mongoose ODM. Implements JWT authentication and bcrypt for password hashing. Integrated with Stripe API for payment processing. Deployed on AWS with CloudFront CDN for optimal performance.",
+        isLive: true,
+        liveUrl: "https://two800-202410-dtc04.onrender.com/"
     },
     showcase1: {
         title: "PlaceSpeak",
@@ -32,6 +32,15 @@ const projectData = {
     showcase2: {
         title: "EdgeSharp",
         tags: ["React Native", "Firebase", "Expo API"],
+        description: "",
+        features: "User authentication and profiles with customizable skate settings, Easy and tailored reservations with saved skate settings, Push notification that employee can notify customers with from employee web app, Prepaid punchcard system that can be recharged",
+        technical: "Developed a React Native mobile app using Expo for capturing Android and IOS users, Implemented React web app to manage reservations from employee side ,used Firebase as BaaS according to expected number of users provided by client ",
+        isLive: false,
+        resources: []
+    },
+    showcase3: {
+        title: "Titanic - Machine Learning from Disaster",
+        tags: ["Predictive Analytics", "Scikit-learn", "Data Treatment"],
         description: "",
         features: "User authentication and profiles with customizable skate settings, Easy and tailored reservations with saved skate settings, Push notification that employee can notify customers with from employee web app, Prepaid punchcard system that can be recharged",
         technical: "Developed a React Native mobile app using Expo for capturing Android and IOS users, Implemented React web app to manage reservations from employee side ,used Firebase as BaaS according to expected number of users provided by client ",
