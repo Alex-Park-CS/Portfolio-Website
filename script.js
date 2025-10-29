@@ -44,11 +44,14 @@ const projectData = {
     showcase3: {
         title: "Titanic - Machine Learning from Disaster",
         tags: ["Predictive Analytics", "Scikit-learn", "Data Treatment"],
-        description: "",
-        features: "User authentication and profiles with customizable skate settings, Easy and tailored reservations with saved skate settings, Push notification that employee can notify customers with from employee web app, Prepaid punchcard system that can be recharged",
-        technical: "Developed a React Native mobile app using Expo for capturing Android and IOS users, Implemented React web app to manage reservations from employee side ,used Firebase as BaaS according to expected number of users provided by client ",
+        description: "A machine learning competition project on Kaggle focused on predicting passenger survival on the Titanic. Using historical data about passengers including their age, class, fare, and family relationships, I built and trained classification models to predict survival outcomes. This project demonstrates data preprocessing, feature engineering, model selection, and evaluation techniques fundamental to predictive analytics.",
+        features: "Exploratory data analysis with visualization of survival patterns, Feature engineering including family size and title extraction from names, Handling missing data through imputation strategies, One-hot encoding for categorical variables, Model comparison including Logistic Regression Random Forest and Gradient Boosting, Cross-validation for robust model evaluation, Hyperparameter tuning for optimal performance",
+        technical: "Built with Python using Pandas for data manipulation and NumPy for numerical operations. Implemented Scikit-learn algorithms including RandomForestClassifier, LogisticRegression, and GradientBoostingClassifier. Used Matplotlib and Seaborn for data visualization. Applied StandardScaler for feature scaling and train_test_split for model validation. Achieved competitive accuracy through ensemble methods and careful feature selection.",
         isLive: false,
-        resources: []
+        resources: {
+            images: ["images/Kaggle/EntryResult.png"],
+            link: "https://github.com/Alex-Park-CS/Kaggle-Titanic"
+        }
     }
 };
 
@@ -89,21 +92,21 @@ function openModal(projectId) {
         const hasLink = project.resources?.link && project.resources.link !== "";
 
         if (hasImages && hasLink) {
-            let galleryHTML = project.resources.images.map(imagePath => 
+            let galleryHTML = project.resources.images.map(imagePath =>
                 `<div class="media-item">
                     <img src="${imagePath}" alt="Project screenshot" onclick="openLightbox('${imagePath}')">
                 </div>`
             ).join('');
-            
+
             galleryHTML += `<div class="media-item-link">
                 <a href="${project.resources.link}" target="_blank" class="cta-button">
                     View Presentation →
                 </a>
             </div>`;
-            
+
             mediaGallery.innerHTML = galleryHTML;
         } else if (hasImages) {
-            mediaGallery.innerHTML = project.resources.images.map(imagePath => 
+            mediaGallery.innerHTML = project.resources.images.map(imagePath =>
                 `<div class="media-item">
                     <img src="${imagePath}" alt="Project screenshot" onclick="openLightbox('${imagePath}')">
                 </div>`
